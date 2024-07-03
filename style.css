@@ -1,0 +1,703 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('kudry.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Asylm';
+    src: url('Asylm02.ttf') format('opentype');
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#countdown {
+    font-size: 2em;
+}
+
+.background {
+    background-image: url("IMG_9647 (1).jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.section {
+    background-image: url('ethno4.jpg'); /* фон для всех секций, кроме первой */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh; /* высота каждой секции */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101%;
+    height: 101%;
+    background-color: rgba(255, 255, 255, 0.97); /* Прозрачный белый фон для всех секций */
+    z-index: 1;
+}
+
+.second-content, .calendar-container, .ornament-section {
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-attachment: fixed;
+}
+
+/* Дальнейшие стили для ваших элементов */
+
+.photo-container img {
+    
+    
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    display: inline-block;
+    max-width: 300px; /* Установите желаемую ширину */
+    position: relative;
+    display: inline-block;
+    
+    height: auto;
+}
+
+.caption {
+    bottom: 130px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый фон */
+    color: hsl(0, 0%, 5%); /* Цвет текста */
+    padding: 5px;
+    text-align: center;
+    font-size: 14px; /* Размер шрифта */
+}
+
+.second-content h1 {
+    font-family: 'Asylm', sans-serif;
+    
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.date-container {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    z-index: 2;
+    font-family: "MyCustomFont", sans-serif;
+}
+
+.date {
+    position: relative;
+    font-size: 5em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: white;
+    z-index: 2;
+}
+
+
+
+.music-button-container {
+    position: relative;
+    top: 700px;
+    left: 140px;
+    
+    z-index: 100;
+}
+
+.round-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    font-size: 0.6em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative; 
+    z-index: 3; 
+    top: 15px;
+    left: 14px;
+}
+
+.rotating-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto; 
+}
+
+.rotating-photo {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 130px; 
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden; 
+    animation: rotate 10s linear infinite;
+    z-index: 2;
+}
+
+.rotating-photo img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.third-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('IMG_9624.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.third-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    background-color: rgba(255, 255, 255, 0.99);
+    z-index: 1;
+}
+
+.third-section h1 {
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+.icon-saukele img {
+    position: relative;
+    height: auto;
+    width: 100px;
+    justify-content: center;
+}
+
+.calendar-container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    color: #000;
+}
+
+.calendar-container h1 { 
+    font-family: 'Asylm', sans-serif;
+    font-weight: normal;
+}
+
+.calendar-container h3 {
+    font-weight: normal;
+}
+
+.calendar {
+    color:black;
+    display: flex;
+    flex-direction: column;
+}
+
+#calendar-adress{
+    width: 100%;
+    order: 0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    background-attachment: fixed;
+    z-index: 1;
+    position: relative;
+    
+}
+
+.fourth-section{
+    font-family: "Caveat";
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    position: relative;
+    height: 50vh;
+    background-image: url('photo3.jpg'); 
+    background-color: #fef9f3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+}
+.fourth-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.99);
+}
+.fourth-section a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 40px;
+    font-size: 15px;
+}
+
+.fourth-section h1 {
+    font-size: 50px;
+}
+.fourth-section h3 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.ornament-section {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.ornament-section img {
+    width: 200px;
+    height: auto;
+}
+
+.top-ornament {
+    top: -50px; /* Adjust as needed to position correctly */
+}
+
+.bottom-ornament {
+    bottom: -50px; /* Adjust as needed to position correctly */
+}
+/* .mainLoginInput::-webkit-input-placeholder { 
+    font-family: 'myFont', Arial, Helvetica, sans-serif;
+  } */
+  
+  .submit-button {
+    margin-top: 10px;
+    background-color: #970917; /* Blue */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: bisque;
+    transform: translateY(-2px);
+  }
+  
+  .submit-button:active {
+    background-color: bisque;
+    transform: translateY(0);
+  }
+  
+
+  .name:-moz-placeholder { 
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+.fifth-section{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    position: relative;
+    height: 50vh;
+    background-image: url('photo3.jpg'); 
+    background-color: #fef9f3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.fifth-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.button {
+    background-color: #970917; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+  
+  
+  #map-widget .controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+
+  
+.weekdays, .days {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weekdays div, .days div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.days {
+    flex-wrap: wrap; 
+}
+
+.days div {
+    flex-basis: calc(100% / 7 - 4px); 
+    box-sizing: border-box; 
+    position: relative; 
+}
+
+.heart-icon {
+    position: absolute;
+    top: -30px; 
+    right: -25px; 
+    width: 100px; 
+    height: 100px; 
+    color: bisque;
+}
+
+/* Медиа-запросы для смартфонов */
+@media (max-width: 600px) {
+    .content h1 {
+        font-size: 1.8em;
+    }
+
+    .date {
+        font-size: 4em;
+        padding: 8px 16px;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    .second-content {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .round-button {
+        width: 40px;
+        height: 40px;
+        font-size: 0.5em;
+        top: 55px;
+        left: 55px;
+    }
+
+    .rotating-container {
+        width: 150px;
+        height: 150px;
+        
+    }
+
+    .rotating-photo {
+        width: 100px; /* Уменьшаем размер изображения */
+        height: 100px; /* Уменьшаем размер изображения */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-height: 700px) {
+    .rotating-container {
+        width: 150px;
+        height: 150px;
+        bottom: 200px;
+    }
+    .caption {
+        bottom: 0px;
+    }
+}
+
+.button-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.gallery-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('ethno.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.gallery-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.94); 
+    z-index: 1;
+}
+
+.gallery {
+    position: relative;
+    max-width: 350px;
+    margin: auto;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .gallery-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    z-index: 2;
+  }
+  
+  .gallery img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  .gallery button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+
+  #countdown {
+    
+    color: #fff;
+    
+    border-radius: 10px;
+    font-size: 1.75em;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#countdown span {
+    display: inline-block;
+    min-width: 50px;
+}
+
+.styled-input {
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 250px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.timer-section {
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.timer-photo img {
+    width: 100%;
+    height: auto;
+}
+.timer-photo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    
+}
+
+.timer-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000;
+    z-index: 2;
+}
+
+.timer-texts {
+    width: 400px;
+}
+
+.timer-text p {
+    color: white;
+    margin: 0;
+    font-size: 1.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timer-texts p {
+    display: inline-block;
+    margin: 0 7px;  /* Adjust margin for spacing */
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.slide-in {
+    opacity: 0; /* Начальное состояние: блок невидим */
+    transform: translateX(-50px); /* Начальное состояние: смещение влево */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавная анимация */
+}
+.slide-in.active {
+    opacity: 1; /* Конечное состояние: блок видим */
+    transform: translateX(0); /* Конечное состояние: без смещения */
+}
+
+#feedbackMessage {
+    position: absolute;
+    top: 550px;
+    color: green;
+    z-index: 2;
+}
+.box {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 2s, opacity 2s;
+}
+
+.box.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
